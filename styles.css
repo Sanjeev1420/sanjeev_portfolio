@@ -1,0 +1,653 @@
+/* Base styles */
+body {
+    font-family: 'Oxygen', Arial, sans-serif;
+    line-height: 28px;
+    background-image: url('https://theavnishkumar.in/background/background.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navbar styles */
+/* Basic styles for the navbar */
+nav {
+    background-color: #fcfcfc;
+    color: rgb(64, 225, 174);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 4.375rem;
+    align-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Work Sans', Arial, Sans-Serif;
+    font-weight: 550;
+    font-size: 18px;
+    transition: color 0.3s;
+    align-content: center;
+    padding-right: 22px;
+}
+
+nav a:hover {
+    color: #2d2a56;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-menu {
+    display: none;
+}
+
+/* Custom styles for responsive navbar */
+@media (max-width: 1024px) {
+    #nav-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    #nav-menu {
+        display: block;
+        background-color: #fcfcfc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        width: 100%;
+        top: 4.375rem; /* Adjust based on your navbar height */
+        left: 0;
+        z-index: 999; /* Ensure it's above the navbar */
+    }
+    
+    #nav-menu.hidden {
+        display: none;
+    }
+    
+    #nav-menu a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+        color: #333333;
+        text-decoration: none;
+        text-align: center;
+        background-color: #fcfcfc;
+    }
+
+    #nav-menu a:hover {
+        background-color: #f8f9fa;
+    }
+}
+
+/* Styles for desktop view */
+@media (min-width: 1025px) {
+    .nav-links {
+        display: flex;
+    }
+    
+    #nav-menu {
+        display: none;
+    }
+}
+
+
+/* Section styles */
+.section {
+    padding: 79px 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Headings */
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #0D9488;
+    font-family: 'Varela Round', Arial, Sans-Serif;
+    line-height: 52px;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+/* About section */
+#about{
+    margin : 60px 30px 0px 20px;
+}
+
+
+.about-container {
+    min-height: calc(100svh - 5.03rem);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+    }
+}
+
+.text-section {
+    margin: 30px 0px 30px 0px;
+    padding: 12px 16px;
+    width : 60%;
+}
+
+.greeting {
+    font-size: 1.3rem;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    .greeting {
+        font-size: 1.3rem;
+    }
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0D9488;
+}
+
+@media (min-width: 1024px) {
+    .name {
+        font-size: 3rem;
+    }
+}
+
+.description {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    .description {
+        font-size: 1.4rem;
+    }
+}
+
+.image-section {
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.icons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icons a {
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 0.9rem;
+}
+
+.icons a:hover {
+    transform: scale(1.2);
+}
+
+a svg,
+a img {
+    margin-right: 0.5rem;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.transform {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-translate-y:hover {
+    transform: translateY(-0.375rem);
+}
+
+.w-12 {
+    width: 3rem;
+}
+
+.h-12 {
+    height: 3rem;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+.duration-500 {
+    transition-duration: 0.5s;
+}
+
+.text-blue-500 {
+    color: #3b82f6;
+}
+
+.p-1-5 {
+    padding: 0.375rem;
+}
+
+
+.text-black {
+    color: black;
+}
+
+.text-yellow-500 {
+    color: #f59e0b;
+}
+
+.hover-bg-yellow-500:hover {
+    background-color: #f59e0b;
+}
+
+.text-green-500 {
+    color: #10b981;
+}
+
+.hover-bg-green-500:hover {
+    background-color: #10b981;
+}
+
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.buttons button {
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight:560;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 8rem;
+    height: 2.8rem;
+    color: white;
+    font-size: large;
+}
+
+.mail-button {
+    color: #fff !important;
+    background-color: #ff0000 !important;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'Exo 2', Arial, Sans-Serif; 
+    justify-content: center;
+}
+
+.mail-button:hover {
+    background-color: #00823f !important;
+}
+
+.resume-button {
+    color: #fff !important;
+    background-color: #ff8c00 !important;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'Exo 2', Arial, Sans-Serif; 
+    justify-content: center;
+}
+
+.resume-button:hover {
+    background-color: #00823f !important;
+}
+
+.resume-button svg,
+.mail-button svg {
+    margin-right: 0.5rem;
+}
+
+/* Skills section */
+#skills {
+    text-align: center; 
+    padding-bottom: 20px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adjust the gap between items */
+}
+
+.skill-item {
+    flex: 1 1 calc(10% - 10px); /* Adjust the width of each item */
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px 20px;
+    animation: bounceIn 1.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    max-width: 150px; /* Adjust the maximum width of each item */
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item img.redux-icon {
+    width: 48px; /* Adjust the size to match the font awesome icons */
+    height: 48px;
+    object-fit: contain; /* Ensure the image fits within the bounds */
+    transition: transform 0.3s ease-in-out; /* Add hover effect */
+    margin-left: 27px;
+}
+
+.skill-item img.redux-icon:hover {
+    transform: translateY(-5px);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.m-4 {
+    margin: 1rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.text-blue-500 {
+    color: #3b82f6;
+}
+
+.text-yellow-500 {
+    color: #fbbf24;
+}
+
+.text-red-500 {
+    color: #ef4444;
+}
+
+.text-green-500 {
+    color: #10b981;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.text-purple-500 {
+    color: #a855f7;
+}
+
+.text-orange-500 {
+    color: #f97316;
+}
+
+.text-black {
+    color: #000000;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+
+/* Projects section */
+#projects h2{
+    text-align: center; 
+}
+
+.allProjects{
+    margin-right: 20px;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+.project {
+    border: 1px;
+    border-radius: 7px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+    backdrop-filter: blur(5px);
+    height: 400px;
+}
+
+.project-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    font-optical-sizing: auto;
+    font-weight:600;
+    font-style: normal;
+    padding-bottom: 10px;
+}
+
+.project-badge {
+    background-color: #d8f9ef;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 3px 10px 0 rgba(181, 181, 181, 0.37); 
+    display: inline-block;
+    padding: 0.5em 0.75em;
+    font-size: 0.9em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.375rem;
+}
+
+.badge-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+
+.project-sourceCode-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-family: 'Exo 2', Sans-Serif; 
+    background: rgb(0,182,166);
+    background: linear-gradient(178deg, rgba(0,182,166,1) 0%, rgba(0,42,31,1) 84%);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin-right: 4px;
+}
+
+.project-sourceCode-btn:hover {
+    text-decoration: none;
+    background: rgb(0,182,166);
+    background: linear-gradient(178deg, rgba(0,182,166,1) 0%, rgba(0,42,31,1) 84%);
+    color:white;
+    box-shadow: 0 8px 32px 0 rgba(192, 253, 234, 0.37)
+}
+
+.project-live-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-family: 'Exo 2', Sans-Serif; 
+    background: rgb(243,53,53);
+    background: linear-gradient(178deg, rgba(243,53,53,1) 0%, rgba(0,42,31,1) 98%);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin-right: 4px;
+}
+
+.project-live-btn:hover {
+    text-decoration: none;
+    background: rgb(243,53,53);
+    background: linear-gradient(178deg, rgba(243,53,53,1) 0%, rgba(0,42,31,1) 98%);
+    color:white;
+    box-shadow: 0 8px 32px 0 rgb(255, 202, 202);
+}
+
+
+
+.carousel-inner img{
+    border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(75%); /* Adjusted invert percentage to make it visible on both backgrounds */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    filter: invert(55%); /* Slightly darker on hover for better visibility */
+}
+
+
+/* Experience section */
+#experience {
+    text-align: center;
+}
+
+.company-logo {
+    width: 100px; /* Adjust size as needed */
+}
+
+.internship-details {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 54rem;
+    backdrop-filter: blur(4px);
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.view-certificate-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-certificate-btn:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Certification section */
+#certifications {
+    text-align: center;
+}
+
+.certificate-wrapper {
+    flex: 1 1 100%; /* By default, take full width */
+    max-width: 100%; /* Ensures that the certificate doesn't exceed full width */
+}
+
+.certificate-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
+    padding: 0px 8px 0px 8px;
+    backdrop-filter: blur(4px);
+}
+
+.certificate-image {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.certificate-container:hover .certificate-image {
+    transform: scale(1.05); 
+}
+
+.caption {
+    color: #003116;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px; 
+}
+
+@media (min-width: 768px) {
+    .certificate-wrapper {
+        flex: 1 1 45%;
+        max-width: 45%; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .certificate-wrapper {
+        flex: 1 1 45%; 
+        max-width: 45%; 
+    }
+}
