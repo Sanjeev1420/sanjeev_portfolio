@@ -535,10 +535,13 @@ a img {
 }
 
 
-
 .carousel-inner img{
     border-radius: 5px;
+    height: 350px;
+    width:92px
 }
+
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -575,16 +578,23 @@ a img {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #007bff;
+    background-color: #00381f;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-family: Calibri;
 }
 
 .view-certificate-btn:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
+    font-size:17px;
+    color: #002615;
+    text-decoration: none;
+    border: 1px solid #00381f;
+    font-family: Calibri;
 }
+
 
 @keyframes fadeInRight {
     from {
