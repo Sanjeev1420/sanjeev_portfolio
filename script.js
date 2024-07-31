@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function viewResume() {
   window.open(
-    "https://drive.google.com/file/d/1yOgLFs0eMnx-nbM2OpgJWlqHObbFVEum/view?usp=drive_link",
+    "https://drive.google.com/file/d/1CsEBOI6pNZ4SSjbisqL8gYQ4blQezUjr/view?usp=drive_link",
     "_blank"
   );
 }
